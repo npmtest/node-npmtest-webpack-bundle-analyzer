@@ -1,1 +1,40 @@
-{     "devDependencies": {         "webpack-bundle-analyzer": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-webpack-bundle-analyzer",     "homepage": "https://github.com/npmtest/node-npmtest-webpack-bundle-analyzer",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-webpack-bundle-analyzer.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "test coverage for [webpack-bundle-analyzer (v2.3.1)](https://github.com/th0r/webpack-bundle-analyzer) [![npm package](https://img.shields.io/npm/v/npmtest-webpack-bundle-analyzer.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-webpack-bundle-analyzer) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-webpack-bundle-analyzer.svg)](https://travis-ci.org/npmtest/node-npmtest-webpack-bundle-analyzer)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha",
+        "webpack-bundle-analyzer": "*"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-webpack-bundle-analyzer",
+    "keywords": [
+        "coverage",
+        "test",
+        "webpack-bundle-analyzer"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_webpack_bundle_analyzer.js",
+    "name": "npmtest-webpack-bundle-analyzer",
+    "nameAlias": "npmtest_webpack_bundle_analyzer",
+    "nameOriginal": "npmtest-webpack-bundle-analyzer",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-webpack-bundle-analyzer.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
