@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-webpack-bundle-analyzer/webpack-bundle-analyzer/lib/analyzer.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-webpack-bundle-analyzer/node_modules/webpack-bundle-analyzer/lib/analyzer.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-webpack-bundle-analyzer">npmtest-webpack-bundle-analyzer (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-webpack-bundle-analyzer/webpack-bundle-analyzer/lib/analyzer.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-webpack-bundle-analyzer/node_modules/webpack-bundle-analyzer/lib/analyzer.js</span></h1>
     <h2>
         
         Statements: <span class="metric">18.67% <small>(14 / 75)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-webpack-bundle-analyzer/webpack-bundle-analyzer/lib/</a> &#187; analyzer.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-webpack-bundle-analyzer/node_modules/webpack-bundle-analyzer/lib/</a> » analyzer.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -573,70 +571,70 @@ module.exports = {
   readStatsFromFile: readStatsFromFile
 };
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getViewerData(bundleStats, bundleDir, opts) {</span>
-<span class="cstat-no" title="statement not covered" >  var _ref = opts || {},</span>
+<span class="fstat-no" title="function not covered">function getViewerData(bundleStats, bundleDir, opts) {</span>
+<span class="cstat-no" title="statement not covered">  var _ref = opts || {},</span>
       _ref$logger = _ref.logger,
       logger = _ref$logger === undefined ? new Logger() : _ref$logger;
 &nbsp;
   // Sometimes all the information is located in `children` array (e.g. problem in #10)
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (_.isEmpty(bundleStats.assets) &amp;&amp; !_.isEmpty(bundleStats.children)) {</span>
-<span class="cstat-no" title="statement not covered" >    bundleStats = bundleStats.children[0];</span>
+<span class="cstat-no" title="statement not covered">  if (_.isEmpty(bundleStats.assets) &amp;&amp; !_.isEmpty(bundleStats.children)) {</span>
+<span class="cstat-no" title="statement not covered">    bundleStats = bundleStats.children[0];</span>
   }
 &nbsp;
   // Picking only `*.js` assets from bundle that has non-empty `chunks` array
-<span class="cstat-no" title="statement not covered" >  bundleStats.assets = _.filter(bundleStats.assets, <span class="fstat-no" title="function not covered" >function (asset) {</span></span>
+<span class="cstat-no" title="statement not covered">  bundleStats.assets = _.filter(bundleStats.assets, <span class="fstat-no" title="function not covered">function (asset) {</span></span>
     // Removing query part from filename (yes, somebody uses it for some reason and Webpack supports it)
     // See #22
-<span class="cstat-no" title="statement not covered" >    asset.name = asset.name.replace(FILENAME_QUERY_REGEXP, '');</span>
+<span class="cstat-no" title="statement not covered">    asset.name = asset.name.replace(FILENAME_QUERY_REGEXP, '');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return _.endsWith(asset.name, '.js') &amp;&amp; !_.isEmpty(asset.chunks);</span>
+<span class="cstat-no" title="statement not covered">    return _.endsWith(asset.name, '.js') &amp;&amp; !_.isEmpty(asset.chunks);</span>
   });
 &nbsp;
   // Trying to parse bundle assets and get real module sizes if `bundleDir` is provided
-<span class="cstat-no" title="statement not covered" >  var parsedModuleSizes = null;</span>
-<span class="cstat-no" title="statement not covered" >  var bundlesSources = {};</span>
-<span class="cstat-no" title="statement not covered" >  var parsedModules = {};</span>
+<span class="cstat-no" title="statement not covered">  var parsedModuleSizes = null;</span>
+<span class="cstat-no" title="statement not covered">  var bundlesSources = {};</span>
+<span class="cstat-no" title="statement not covered">  var parsedModules = {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (bundleDir) {</span>
-<span class="cstat-no" title="statement not covered" >    for (var _iterator = bundleStats.assets, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {</span>
-<span class="cstat-no" title="statement not covered" >      var _ref2;</span>
+<span class="cstat-no" title="statement not covered">  if (bundleDir) {</span>
+<span class="cstat-no" title="statement not covered">    for (var _iterator = bundleStats.assets, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {</span>
+<span class="cstat-no" title="statement not covered">      var _ref2;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (_isArray) {</span>
-<span class="cstat-no" title="statement not covered" >        if (_i &gt;= _iterator.length) <span class="cstat-no" title="statement not covered" >break;</span></span>
-<span class="cstat-no" title="statement not covered" >        _ref2 = _iterator[_i++];</span>
+<span class="cstat-no" title="statement not covered">      if (_isArray) {</span>
+<span class="cstat-no" title="statement not covered">        if (_i &gt;= _iterator.length) <span class="cstat-no" title="statement not covered">break;</span></span>
+<span class="cstat-no" title="statement not covered">        _ref2 = _iterator[_i++];</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        _i = _iterator.next();</span>
-<span class="cstat-no" title="statement not covered" >        if (_i.done) <span class="cstat-no" title="statement not covered" >break;</span></span>
-<span class="cstat-no" title="statement not covered" >        _ref2 = _i.value;</span>
+<span class="cstat-no" title="statement not covered">        _i = _iterator.next();</span>
+<span class="cstat-no" title="statement not covered">        if (_i.done) <span class="cstat-no" title="statement not covered">break;</span></span>
+<span class="cstat-no" title="statement not covered">        _ref2 = _i.value;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      var statAsset = _ref2;</span>
+<span class="cstat-no" title="statement not covered">      var statAsset = _ref2;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      var assetFile = path.join(bundleDir, statAsset.name);</span>
-<span class="cstat-no" title="statement not covered" >      var bundleInfo = void 0;</span>
+<span class="cstat-no" title="statement not covered">      var assetFile = path.join(bundleDir, statAsset.name);</span>
+<span class="cstat-no" title="statement not covered">      var bundleInfo = void 0;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >        bundleInfo = parseBundle(assetFile);</span>
+<span class="cstat-no" title="statement not covered">      try {</span>
+<span class="cstat-no" title="statement not covered">        bundleInfo = parseBundle(assetFile);</span>
       } catch (err) {
-<span class="cstat-no" title="statement not covered" >        bundleInfo = null;</span>
+<span class="cstat-no" title="statement not covered">        bundleInfo = null;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (bundleInfo) {</span>
-<span class="cstat-no" title="statement not covered" >        bundlesSources[statAsset.name] = bundleInfo.src;</span>
-<span class="cstat-no" title="statement not covered" >        _.assign(parsedModules, bundleInfo.modules);</span>
+<span class="cstat-no" title="statement not covered">      if (bundleInfo) {</span>
+<span class="cstat-no" title="statement not covered">        bundlesSources[statAsset.name] = bundleInfo.src;</span>
+<span class="cstat-no" title="statement not covered">        _.assign(parsedModules, bundleInfo.modules);</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        logger.warn('\nCouldn\'t parse bundle asset "' + assetFile + '".\n' + 'Analyzer will use module sizes from stats file.\n');</span>
-<span class="cstat-no" title="statement not covered" >        parsedModules = null;</span>
-<span class="cstat-no" title="statement not covered" >        bundlesSources = null;</span>
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        logger.warn('\nCouldn\'t parse bundle asset "' + assetFile + '".\n' + 'Analyzer will use module sizes from stats file.\n');</span>
+<span class="cstat-no" title="statement not covered">        parsedModules = null;</span>
+<span class="cstat-no" title="statement not covered">        bundlesSources = null;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (parsedModules) {</span>
-<span class="cstat-no" title="statement not covered" >      parsedModuleSizes = _.mapValues(parsedModules, <span class="fstat-no" title="function not covered" >function (moduleSrc) {</span></span>
-<span class="cstat-no" title="statement not covered" >        return {</span>
+<span class="cstat-no" title="statement not covered">    if (parsedModules) {</span>
+<span class="cstat-no" title="statement not covered">      parsedModuleSizes = _.mapValues(parsedModules, <span class="fstat-no" title="function not covered">function (moduleSrc) {</span></span>
+<span class="cstat-no" title="statement not covered">        return {</span>
           raw: moduleSrc.length,
           gzip: gzipSize.sync(moduleSrc)
         };
@@ -644,29 +642,29 @@ module.exports = {
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var assets = _.transform(bundleStats.assets, <span class="fstat-no" title="function not covered" >function (result, statAsset) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var asset = result[statAsset.name] = _.pick(statAsset, 'size');</span>
+<span class="cstat-no" title="statement not covered">  var assets = _.transform(bundleStats.assets, <span class="fstat-no" title="function not covered">function (result, statAsset) {</span></span>
+<span class="cstat-no" title="statement not covered">    var asset = result[statAsset.name] = _.pick(statAsset, 'size');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (bundlesSources) {</span>
-<span class="cstat-no" title="statement not covered" >      asset.parsedSize = bundlesSources[statAsset.name].length;</span>
-<span class="cstat-no" title="statement not covered" >      asset.gzipSize = gzipSize.sync(bundlesSources[statAsset.name]);</span>
+<span class="cstat-no" title="statement not covered">    if (bundlesSources) {</span>
+<span class="cstat-no" title="statement not covered">      asset.parsedSize = bundlesSources[statAsset.name].length;</span>
+<span class="cstat-no" title="statement not covered">      asset.gzipSize = gzipSize.sync(bundlesSources[statAsset.name]);</span>
     }
 &nbsp;
     // Picking modules from current bundle script
-<span class="cstat-no" title="statement not covered" >    asset.modules = _(bundleStats.modules).filter(<span class="fstat-no" title="function not covered" >function (statModule) {</span></span>
-<span class="cstat-no" title="statement not covered" >      return assetHasModule(statAsset, statModule);</span>
-    }).each(<span class="fstat-no" title="function not covered" >function (statModule) {</span>
-<span class="cstat-no" title="statement not covered" >      if (parsedModuleSizes) {</span>
-<span class="cstat-no" title="statement not covered" >        statModule.parsedSize = parsedModuleSizes[statModule.id].raw;</span>
-<span class="cstat-no" title="statement not covered" >        statModule.gzipSize = parsedModuleSizes[statModule.id].gzip;</span>
+<span class="cstat-no" title="statement not covered">    asset.modules = _(bundleStats.modules).filter(<span class="fstat-no" title="function not covered">function (statModule) {</span></span>
+<span class="cstat-no" title="statement not covered">      return assetHasModule(statAsset, statModule);</span>
+    }).each(<span class="fstat-no" title="function not covered">function (statModule) {</span>
+<span class="cstat-no" title="statement not covered">      if (parsedModuleSizes) {</span>
+<span class="cstat-no" title="statement not covered">        statModule.parsedSize = parsedModuleSizes[statModule.id].raw;</span>
+<span class="cstat-no" title="statement not covered">        statModule.gzipSize = parsedModuleSizes[statModule.id].gzip;</span>
       }
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    asset.tree = createModulesTree(asset.modules);</span>
+<span class="cstat-no" title="statement not covered">    asset.tree = createModulesTree(asset.modules);</span>
   }, {});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return _.transform(assets, <span class="fstat-no" title="function not covered" >function (result, asset, filename) {</span></span>
-<span class="cstat-no" title="statement not covered" >    result.push({</span>
+<span class="cstat-no" title="statement not covered">  return _.transform(assets, <span class="fstat-no" title="function not covered">function (result, asset, filename) {</span></span>
+<span class="cstat-no" title="statement not covered">    result.push({</span>
       label: filename,
       // Not using `asset.size` here provided by Webpack because it can be very confusing when `UglifyJsPlugin` is used.
       // In this case all module sizes from stats file will represent unminified module sizes, but `asset.size` will
@@ -679,32 +677,32 @@ module.exports = {
   }, []);
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function readStatsFromFile(filename) {</span>
-<span class="cstat-no" title="statement not covered" >  return JSON.parse(fs.readFileSync(filename, 'utf8'));</span>
+<span class="fstat-no" title="function not covered">function readStatsFromFile(filename) {</span>
+<span class="cstat-no" title="statement not covered">  return JSON.parse(fs.readFileSync(filename, 'utf8'));</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function assetHasModule(statAsset, statModule) {</span>
-<span class="cstat-no" title="statement not covered" >  return _.some(statModule.chunks, <span class="fstat-no" title="function not covered" >function (moduleChunk) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return _.includes(statAsset.chunks, moduleChunk);</span>
+<span class="fstat-no" title="function not covered">function assetHasModule(statAsset, statModule) {</span>
+<span class="cstat-no" title="statement not covered">  return _.some(statModule.chunks, <span class="fstat-no" title="function not covered">function (moduleChunk) {</span></span>
+<span class="cstat-no" title="statement not covered">    return _.includes(statAsset.chunks, moduleChunk);</span>
   });
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function createModulesTree(modules) {</span>
-<span class="cstat-no" title="statement not covered" >  var root = new Folder('.');</span>
+<span class="fstat-no" title="function not covered">function createModulesTree(modules) {</span>
+<span class="cstat-no" title="statement not covered">  var root = new Folder('.');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  _.each(modules, <span class="fstat-no" title="function not covered" >function (module) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var path = getModulePath(module.name);</span>
+<span class="cstat-no" title="statement not covered">  _.each(modules, <span class="fstat-no" title="function not covered">function (module) {</span></span>
+<span class="cstat-no" title="statement not covered">    var path = getModulePath(module.name);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (path) {</span>
-<span class="cstat-no" title="statement not covered" >      root.addModuleByPath(path, module);</span>
+<span class="cstat-no" title="statement not covered">    if (path) {</span>
+<span class="cstat-no" title="statement not covered">      root.addModuleByPath(path, module);</span>
     }
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return root;</span>
+<span class="cstat-no" title="statement not covered">  return root;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getModulePath(path) {</span>
-<span class="cstat-no" title="statement not covered" >  var parsedPath = _</span>
+<span class="fstat-no" title="function not covered">function getModulePath(path) {</span>
+<span class="cstat-no" title="statement not covered">  var parsedPath = _</span>
   // Removing loaders from module path: they're joined by `!` and the last part is a raw module path
   .last(path.split('!'))
   // Splitting module path into parts
@@ -712,17 +710,18 @@ module.exports = {
   // Removing first `.`
   .slice(1)
   // Replacing `~` with `node_modules`
-  .map(<span class="fstat-no" title="function not covered" >function (part) {</span>
-<span class="cstat-no" title="statement not covered" >    return part === '~' ? 'node_modules' : part;</span>
+  .map(<span class="fstat-no" title="function not covered">function (part) {</span>
+<span class="cstat-no" title="statement not covered">    return part === '~' ? 'node_modules' : part;</span>
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return parsedPath.length ? parsedPath : null;</span>
+<span class="cstat-no" title="statement not covered">  return parsedPath.length ? parsedPath : null;</span>
 }
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 08:12:00 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 09:23:26 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
