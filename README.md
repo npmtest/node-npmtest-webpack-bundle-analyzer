@@ -1,6 +1,6 @@
 # npmtest-webpack-bundle-analyzer
 
-#### test coverage for  [webpack-bundle-analyzer (v2.4.0)](https://github.com/th0r/webpack-bundle-analyzer)  [![npm package](https://img.shields.io/npm/v/npmtest-webpack-bundle-analyzer.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-webpack-bundle-analyzer) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-webpack-bundle-analyzer.svg)](https://travis-ci.org/npmtest/node-npmtest-webpack-bundle-analyzer)
+#### basic test coverage for  [webpack-bundle-analyzer (v2.4.0)](https://github.com/th0r/webpack-bundle-analyzer)  [![npm package](https://img.shields.io/npm/v/npmtest-webpack-bundle-analyzer.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-webpack-bundle-analyzer) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-webpack-bundle-analyzer.svg)](https://travis-ci.org/npmtest/node-npmtest-webpack-bundle-analyzer)
 
 #### Webpack plugin and CLI utility that represents bundle content as convenient interactive zoomable treemap
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-webpack-bundle-analyzer/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-webpack-bundle-analyzer/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-webpack-bundle-analyzer/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-webpack-bundle-analyzer/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-webpack-bundle-analyzer/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-webpack-bundle-analyzer/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-webpack-bundle-analyzer/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-webpack-bundle-analyzer/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-webpack-bundle-analyzer/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-webpack-bundle-analyzer/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-webpack-bundle-analyzer/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-webpack-bundle-analyzer/build/coverage.html/index.html)
 
